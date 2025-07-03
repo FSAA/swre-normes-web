@@ -17,12 +17,9 @@ var closeMainMenu = function () {
 var closeMainSearch = function () {
   document.querySelector(".header-search").classList.remove("open");
   document.removeEventListener("keydown", detectBackTabOnSearchBar);
-  document
-    .querySelector(".header-search-trigger")
-    .setAttribute("aria-expanded", "false");
-  document
-    .querySelector(".header-search-trigger")
-    .setAttribute("aria-label", "Ouvrir le menu de recherche");
+  let trigger = document.querySelector(".header-search-trigger");
+  trigger.setAttribute("aria-expanded", "false")
+  trigger.setAttribute("aria-label", trigger.getAttribute("data-open-search-label"));
 };
 
 // Fermeture du moteur de recherche
@@ -121,7 +118,7 @@ if ((searchBarButton = document.querySelector(".header-search-trigger"))) {
       document.querySelector(".header-search-input").focus();
       document.addEventListener("keydown", detectBackTabOnSearchBar);
       this.setAttribute("aria-expanded", "true");
-      this.setAttribute("aria-label", "Fermer le menu de recherche");
+      this.setAttribute("aria-label", this.getAttribute("data-close-search-label"));
     } else {
       closeMainSearch();
     }
@@ -281,3 +278,11 @@ document.addEventListener("animationend", function (e) {
     e.target.classList.remove("remove");
   }
 });
+
+function setFullHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+window.addEventListener('resize', setFullHeight);
+window.addEventListener('orientationchange', setFullHeight);
+setFullHeight();

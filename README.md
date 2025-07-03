@@ -6,10 +6,10 @@ Les différentes cas d'utilisation sont démontrés dans les quatre gabarits du 
 ### Gabarits de référence ###
 En fonction de votre type de site, utilisez le fichier HTML correspondant à votre URL:
 
-* `ulaval.ca` devrait utilisé le gabarit `university.html`.
-* `unite.ulaval.ca` devrait utilisé le gabarit `unit--no-submenu.html`.
-* `unite.ulaval.ca/sous-unite` devrait utilisé le gabarit `subunit--with-submenu.html`.
-* `sous-unite.unite.ulaval.ca` devrait utilisé le gabarit `subunit.html`.
+* `ulaval.ca` devrait utiliser le gabarit `university.html`.
+* `unite.ulaval.ca` devrait utiliser le gabarit `unit--no-submenu.html`.
+* `unite.ulaval.ca/sous-unite` devrait utiliser le gabarit `subunit--with-submenu.html`.
+* `sous-unite.unite.ulaval.ca` devrait utiliser le gabarit `subunit.html`.
 
 ### Structure de dossier ###
 La structure de dossier suivante est recommandée pour la bonne compilation des styles et des scripts.

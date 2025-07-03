@@ -1,6 +1,20 @@
 # Changelog #
 Changelog du projet des **Normes Web pour les sites de l'Université Laval**
 
+## [v1.4] - 2025-06-26
+### Changements visuels
+* Changements importants des styles de titre, d'espacement, de hauteur de ligne et des hyperliens
+### Changements dans le pied de page
+* Ajout du réseau social Bluesky dans le pied de page
+* Rendre _Mesures d'urgence_ facultatif
+### Formulaire de recherche
+* Ajout d'un paramètre permettant de modifier le nom de l'input du formulaire de recherche en entête
+* Rendre le ARIA traduisible
+* Retrait de l'option "Bottin" en faveur d'un lien de menu secondaire
+### Correctifs mobiles
+* Correctif du menu mobile visuellement coupé sur iOS dans certains cas
+* Correctif de l'alignement des éléments de menu dans certains cas
+
 ## [v1.3] - 2024-07-08
 ### Ajout de bouton de préférences
 * Ajout d'un bouton permettant de revoir le choix des préférences de la bannière de consentement.
