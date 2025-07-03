@@ -6,83 +6,86 @@
 @import "../abstracts/_abstracts.scss";
 
 // Styles
-.skip-to-content {
-  text-align: center;
-  background-color: $color-gray-lighter;
-
-  a {
-    color: $color-gray-dark;
-    display: inline-block;
-    margin-bottom: 0.25em;
-    margin-top: 0.25em;
-    padding-left: 0.125em;
-    padding-right: 0.125em;
-
-    &:focus {
-      outline-color: $color-gray-dark;
-      outline-offset: 2px;
-      outline-style: solid;
-      outline-width: 1px;
-    }
-  }
-}
-
-// Accesible way to visualy hide something but keep it focusable
-// https://www.a11yproject.com/posts/how-to-hide-content/
-.visually-hidden {
-  clip-path: inset(50%);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-
-  &.focusable:active,
-  &.focusable:focus {
-    clip-path: none;
-    clip: auto;
-    height: auto;
-    overflow: visible;
-    position: static !important;
-    white-space: normal;
-    width: auto;
-  }
-}
-
-// UI utility to remove any content styling
-.menu {
-  margin: 0;
-  padding: 0;
-
-  li {
-    list-style-type: none;
-    margin: 0;
-  }
-}
-
-.accessible-links-wrapper {
-  a,
-  .ot-sdk-show-settings {
-    margin: 0 -2px;
-    padding: 0 2px;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-
-    &:focus {
-      outline-color: $color-black;
-      outline-offset: 1px;
-      outline-style: solid;
-      outline-width: 1px;
-    }
-  }
-}
-
-@media (min-width: $breakpoint-md) {
+.#{$prefix}header,
+.#{$prefix}footer {
   .skip-to-content {
-    text-align: left;
+    text-align: center;
+    background-color: $color-gray-lighter;
+
+    a {
+      color: $color-gray-dark;
+      display: inline-block;
+      margin-bottom: 0.25em;
+      margin-top: 0.25em;
+      padding-left: 0.125em;
+      padding-right: 0.125em;
+
+      &:focus {
+        outline-color: $color-gray-dark;
+        outline-offset: 2px;
+        outline-style: solid;
+        outline-width: 1px;
+      }
+    }
+  }
+
+  // Accesible way to visualy hide something but keep it focusable
+  // https://www.a11yproject.com/posts/how-to-hide-content/
+  .visually-hidden {
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+    &.focusable:active,
+    &.focusable:focus {
+      clip-path: none;
+      clip: auto;
+      height: auto;
+      overflow: visible;
+      position: static !important;
+      white-space: normal;
+      width: auto;
+    }
+  }
+
+  // UI utility to remove any content styling
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 0;
+    }
+  }
+
+  .accessible-links-wrapper {
+    a,
+    .ot-sdk-show-settings {
+      margin: 0 -2px;
+      padding: 0 2px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline-color: $color-black;
+        outline-offset: 1px;
+        outline-style: solid;
+        outline-width: 1px;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .skip-to-content {
+      text-align: left;
+    }
   }
 }

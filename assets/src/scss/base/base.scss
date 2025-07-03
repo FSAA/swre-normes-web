@@ -2,5 +2,29 @@
  * Import default element reset and typography browser inconsistencies for default box-sizing, line-heights, margins for all elements.
  */
 
-@import "./_reset.scss";
-@import "./_typography.scss";
+ @import "../abstracts/_abstracts.scss";
+
+.#{$prefix}footer,
+.#{$prefix}header {
+  // html element
+  & {
+    line-height:1.15;
+    -webkit-text-size-adjust:100%;
+
+    font-size: 1rem;
+    line-height: 1.375;
+    scroll-behavior: smooth;
+  }
+
+  // body element
+  & {
+    color: $color-black;
+    font-family: "Source Sans 3", "Source Sans Pro", SourceSansPro, -apple-system,
+      Roboto, Segoe UI, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  @import "./_reset.scss";
+  @import "./_typography.scss";
+}
